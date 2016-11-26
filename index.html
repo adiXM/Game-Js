@@ -1,16 +1,32 @@
 <html>
 <head>
-	<script type="text/javascript">
-	function Bomba() {
-		document.write("Knp boss");
-	}
-</script>
-
 </head>
 
 <body>
-	<h1> This is my first game </h1>
-	<button type="button" onclick="Bomba()"> Apasa </button>
+	<h1> Niste chestii </h1>
+	
+	
+	<canvas id="bor" style="border: solid 1px" width = "1000" height = "100"></canvas>
+	
+	<script>
+	
+	
+		var bor = document.getElementById("bor").getContext("2d");
+		var x = 0;
+		var y = 0;
+		function Update() {
+			bor.clearRect(x - 50,y,100,100);
+			bor.fillRect(x,y,100,100);
+			
+			x += 50;
+			if(x == 1100) {
+				x = 0;
+			}
+		}
+		Update();
+		setInterval(Update, 100);	
+		
+	</script>
 </body>
 
 
