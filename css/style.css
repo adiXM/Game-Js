@@ -1,12 +1,27 @@
 .homepage {
     margin: 0 auto;
-    width: 65%;
-	height: 75%;
     border: solid 2px;
     padding: 28px;
+    border-radius : 5px;
+    width: 56%;
 }
 
 .buton{
-	padding : 10px;
-	border: 0;
+	margin-top: 5px;
+	background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.scores{
+	color: black;
+    font-family: Arial
 }
