@@ -1,12 +1,11 @@
-		function Home () {
-			var c=document.getElementById("start");
-			var ctx=c.getContext("2d");
-			ctx.strokeStyle = 'black';
-			ctx.strokeRect(0, 0, 750, 360);
-			ctx.font="50px Arial";
-			ctx.fillText("Snake Game",220,180);
-		}
-		Home();
+	
+		var c=document.getElementById("start");
+		var ctx=c.getContext("2d");
+		ctx.strokeStyle = 'black';
+		ctx.strokeRect(0, 0, 750, 360);
+		ctx.font="50px Arial";
+		ctx.fillText("Snake Game",220,180);
+	
 		function Start_Game() {
 				document.getElementById("but").disabled = true;
 				var scena = document.getElementById('start');
