@@ -1,0 +1,12 @@
+.homepage {
+    margin: 0 auto;
+    width: 65%;
+	height: 75%;
+    border: solid 2px;
+    padding: 28px;
+}
+
+.buton{
+	padding : 10px;
+	border: 0;
+}
