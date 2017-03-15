@@ -48,7 +48,7 @@
 			game.fillStyle = '#4CAF50';
 			game.fillRect(x * snakeSize, y * snakeSize, snakeSize, snakeSize);      
 		};
-
+		
 		var Run_Game = function () {
 
 			game.fillStyle = 'white';
@@ -124,38 +124,36 @@
 						DrawCell(snake[i].x, snake[i].y);
 					}
 					DrawCell(food.x, food.y);
-				}
-
+		}
+		function Reseteaza() {
+			snakeSize = 15;
+			width = 750, height = 360;
+			snakeX = 1, snakeY = 1;
+		}				
+		var Debug = function () {
+			for (var i = 0; i < snake.length; i++) {
+				console.log(snake[i].x);
+				console.log(snake[i].y);
+			};
+					
+		}
+		var Init = function() {
+			score  = 0;
+			dir = "right";
+			Make_Snake();
+			Make_Food();
+			Run = setInterval(Run_Game, 80);
+		}
 		function Start_Game() {
 				document.getElementById("but").disabled = true;
-				
-				
-				
-				function Reseteaza() {
-					snakeSize = 15;
-					width = 750, height = 360;
-					snakeX = 1, snakeY = 1;
-				}
-				
-				
-				var Debug = function () {
-					for (var i = 0; i < snake.length; i++) {
-						console.log(snake[i].x);
-						console.log(snake[i].y);
-					};
-					
-				}
-
-				var Init = function() {
-					score  = 0;
-					dir = "right";
-					Make_Snake();
-					Make_Food();
-					Run = setInterval(Run_Game, 80);
-				}
 				Init();
 		};
-
+		function Quit() {
+			if (confirm("Sigur vrei sa faci asta?") == true) {
+				window.close();
+			}
+			
+		};
 		function ClearBoard() {
 			game.clearRect(0,0,width,height);
 			game.fillStyle = 'white';
