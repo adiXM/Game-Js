@@ -21,6 +21,10 @@ button:disabled {
     opacity: 0.6;
     cursor: not-allowed;
 }
+button:hover{
+	transition: 0.2s linear;
+	background: #409443;
+}
 .scores{
 	color: black;
     font-family: Arial
